@@ -1,0 +1,18 @@
+SQL_UP = """
+	CREATE TABLE  tface_voto (
+	  id int(10) unsigned auto_increment NOT NULL,
+	  user varchar(64) NOT NULL,
+	  target varchar(64) NOT NULL,
+	  rating int(10) NOT NULL,
+	  context varchar(32) NOT NULL,
+	  data timestamp NOT NULL,
+	  PRIMARY KEY (id),
+	  KEY INDEX_TFACE_VOTO_USER (user),
+	  KEY INDEX_TFACE_VOTO_TARGET (target),
+	  KEY INDEX_TFACE_VOTO_CONTEXT (context)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+"""
+
+SQL_DOWN = """
+	DROP TABLE  tface_voto;
+"""
