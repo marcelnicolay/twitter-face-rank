@@ -12,7 +12,7 @@ import datetime
 class VotoController(BaseController):
     CONTEXT = ""
     
-    def index(self, request_handler, **kw):
+    def create(self, request_handler, **kw):
         resuSet = (None, "success", "error")
         retorno = {"result": resuSet[0], "message":"Nenhuma alteração efetuada"}
         
@@ -42,8 +42,3 @@ class VotoController(BaseController):
 
 
 
-
-
-
-    def create(self, request_handler, **kw):
-        return self.render_to_json({}, request_handler)

@@ -1,6 +1,5 @@
 from torneira.core.dispatcher import url
 from twittface.controller.home import HomeController
-<<<<<<< HEAD
 from twittface.controller.login import LoginController
 
 urls = (
