@@ -10,7 +10,12 @@ import settings
 
 class LoginController(BaseController):
     
+    
     def index(self, request_handler):
+        return self.render_to_template("login.html")
+        
+        
+    def oauth(self, request_handler):
         
         auth = tweepy.OAuthHandler("5dMcC3yYelEVwQykbsitcA","63g7kzmNdJX25qVuz51RMUFXCwiJ7DKaeoMn3fLmlQ", "http://twittface.local:8080/login/oauth_callback")        
         redirect_url = auth.get_authorization_url()

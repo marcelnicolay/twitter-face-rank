@@ -11,6 +11,14 @@ SQL_UP = """
 	  KEY INDEX_TFACE_VOTO_TARGET (target),
 	  KEY INDEX_TFACE_VOTO_CONTEXT (context)
 	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+	CREATE TABLE  tface_usuario (
+	  id int(10) unsigned auto_increment NOT NULL,
+	  id_twitter int(10) NOT NULL,
+	  image_url varchar(255) NOT NULL,
+	  PRIMARY KEY (id)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 """
 
 SQL_DOWN = """
