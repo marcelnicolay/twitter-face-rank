@@ -41,7 +41,7 @@ def main():
     pidfile = "/opt/logs/twittface/python-fe/torneira-%s.pid" % port
     
     from torneira.core.server import TorneiraServer
-    server = TorneiraServer(pidfile=pidfile, port=port, project_root=project_root, media_dir="%s/../media" % project_root)
+    server = TorneiraServer(pidfile=pidfile, port=port, project_root=project_root, media_dir="%s/media" % project_root)
     
     if asDaemon:
         if not command or command[0] not in ["start","stop","restart"]:
