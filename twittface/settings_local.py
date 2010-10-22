@@ -9,8 +9,8 @@ DATABASE_POOL_SIZE = 50
 logging.basicConfig(
     level = getattr(logging, "DEBUG"),
     format = '%(asctime)s %(levelname)s %(message)s',
-    filename = "/opt/logs/twittface/python-fe/api.log",
-    filemode = 'a'
+#    filename = "/opt/logs/twittface/python-fe/api.log",
+#    filemode = 'a'
 )
 logging.getLogger('sqlalchemy').setLevel(logging.ERROR)
 
