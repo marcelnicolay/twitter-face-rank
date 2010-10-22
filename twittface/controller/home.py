@@ -10,7 +10,7 @@ import settings
 
 class HomeController(BaseController):
     
-    @authenticated
+    #@authenticated
     def index(self, request_handler):
         
         return self.render_to_template("home.html")

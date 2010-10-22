@@ -1,6 +1,7 @@
-#Fri Oct 22 17:44:27 BRST 2010
+#Fri Oct 22 17:54:39 BRST 2010
 eclipse.preferences.version=1
 encoding//twittface/controller/__init__.py=utf-8
+encoding//twittface/controller/home.py=utf-8
 encoding//twittface/controller/voto.py=utf-8
 encoding//twittface/models/voto.py=utf-8
 encoding//twittface/templates/home.html=UTF-8

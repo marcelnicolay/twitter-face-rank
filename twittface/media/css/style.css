@@ -21,7 +21,7 @@ body{
 
 header{
 	background: url(../images/header.jpg) repeat-x;
-	padding-top: 20px;
+	padding-top: 15px;
 	height: 165px;
 }
 
@@ -36,7 +36,7 @@ footer{
 #logo{
 	background: url(../images/logo.png) no-repeat;
 	height: 150px;
-	width: 207px;
+	width: 450px;
 	float: left;
 }
 
