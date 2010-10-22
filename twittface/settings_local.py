@@ -3,7 +3,7 @@ import logging, os
 DEBUG = True
 PROFILING = False
 
-DATABASE_ENGINE = "mysql://localhost:3306/twittface?charset=utf8&use_unicode=0"
+DATABASE_ENGINE = "mysql://root:@localhost:3306/twittface?charset=utf8&use_unicode=0"
 DATABASE_POOL_SIZE = 50
 
 logging.basicConfig(
