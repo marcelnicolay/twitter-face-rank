@@ -218,6 +218,32 @@ ul[id|="sub"] li a:active{
 	background-color: #000000;	
 }
 
+#content .box_voted{
+	position: relative;
+	width: 73px;
+	height: 73px;
+	
+}
+
+#content .box_voted span{
+	position: absolute;
+	display: block;
+	right: 0;
+	top: 43px;
+	z-index: 2;
+	font-size: xx-large;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 20px;
+	color: #000000;
+	background-color: #FFFFFF;
+	padding: 2px;
+}
+
+#content .box_voted img{
+	position: absolute;
+}
+
 #novidades{
 	background-color: #d5d9ff;
 	width: 445px;
