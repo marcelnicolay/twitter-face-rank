@@ -24,7 +24,7 @@ $(document).ready( function(){
 	
 	$("div#banner", $("div.container")).bind("next_pic", function(event){
 		if(TARGET_LIST.length == 0){
-			$.getJSON('/search/result.json?palavra=bunda', function(data) {
+			$.getJSON('/search/result.json?palavra=batom', function(data) {
 				TARGET_LIST = data["tweets"];
 				refresh_target(TARGET_LIST.pop());
 			});
