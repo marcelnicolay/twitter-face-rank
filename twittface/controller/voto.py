@@ -4,6 +4,7 @@
 from torneira.controller import BaseController, render_to_extension
 from tornado.web import HTTPError
 from twittface.models.voto import Voto 
+import tweepy
 
 import math
 import settings
@@ -39,6 +40,14 @@ class VotoController(BaseController):
             retorno = {"result": resuSet[2], "message":"Dados incompletos"}
         
         return self.render_to_json(retorno, request_handler)
+    
+    
+    def random_target(self, request_handler):
+        
+        retorno = {"id_twitter":234L, "image_url":"http://twittface.local:8080/media/images/pp.jpg", "last_tweet":"qqre porra"}
+        
+        return self.render_to_json(retorno, request_handler)
+    
 
 
 
