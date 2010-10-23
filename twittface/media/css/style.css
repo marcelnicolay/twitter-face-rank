@@ -218,6 +218,26 @@ ul[id|="sub"] li a:active{
 	background-color: #000000;	
 }
 
+#publicidade{
+	margin-top: 30px;
+	float: left;
+	width: 470px;
+	background-color: #FFF;
+}
+
+#publicidade span{
+	float:left;
+	position: relative;
+	background-color: #000000;
+	margin-left: 25px;
+	width: 440px;
+	height: 120px;
+}
+
+#publicidade img{
+	position: absolute;
+}
+
 #voted{
 	margin-top: 15px;
 	padding: 0px;
