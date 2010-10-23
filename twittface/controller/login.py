@@ -10,20 +10,19 @@ import tweepy
 
 import math
 import settings
+import logging
 
 class LoginController(BaseController):
     
-    request_token = None
     def index(self, request_handler):
         return self.render_to_template("login.html")
-        
         
     def oauth(self, request_handler):
         
         auth = tweepy.OAuthHandler("5dMcC3yYelEVwQykbsitcA","63g7kzmNdJX25qVuz51RMUFXCwiJ7DKaeoMn3fLmlQ", "http://twittface.local:8080/login/oauth_callback")        
         redirect_url = auth.get_authorization_url()
 
-        self.request_token = (auth.request_token.key, auth.request_token.secret)
+        request_handler.set_secure_cookie(name="OAUTH_TOKEN", value=str("%s|%s" % (auth.request_token.key, auth.request_token.secret)), path="/", expires_days=1)
         
         request_handler.redirect(redirect_url)
         return
@@ -31,7 +30,10 @@ class LoginController(BaseController):
     def oauth_callback(self, request_handler, **kw):
         
         auth = tweepy.OAuthHandler("5dMcC3yYelEVwQykbsitcA","63g7kzmNdJX25qVuz51RMUFXCwiJ7DKaeoMn3fLmlQ")
-        auth.set_request_token(self.request_token[0], self.request_token[1])
+        
+        request_token = request_handler.get_secure_cookie("OAUTH_TOKEN").split("|")
+        
+        auth.set_request_token(request_token[0], request_token[1])
         auth.get_access_token(kw.get('oauth_verifier'))
         
         api = tweepy.API(auth)
@@ -47,5 +49,11 @@ class LoginController(BaseController):
             usuario.save()
             
         request_handler.set_secure_cookie(name="TWITTFACE_ID", value=str(usuario.id), path="/", expires_days=None)        
+        request_handler.redirect("/")
+        return
+        
+    def logout(self, request_handler):
+        request_handler.clear_all_cookies()
+
         request_handler.redirect("/")
         return
