@@ -1,0 +1,15 @@
+SQL_UP = """
+	CREATE TABLE  tface_campanha (
+	  id int(10) unsigned auto_increment NOT NULL,
+	  nome varchar(64) NOT NULL,
+      ativo bit(1) NOT NULL DEFAULT b'0',
+	  votos int(10) NULL,
+	  tempo int(10) NOT NULL,
+	  inicio timestamp NULL,
+	  PRIMARY KEY (id)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+"""
+
+SQL_DOWN = """
+	DROP TABLE  tface_campanha;
+"""
