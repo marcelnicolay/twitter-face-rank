@@ -6,31 +6,31 @@ $(document).ready( function(){
 	refresh_target = function(object_user){
 		url_image = object_user["image_url"].replace("_normal.",".");
 
-		$("div#banner", $("div.container")).hide();
-		$("div#content", $("div.container")).hide();
 		$("p", $("div.container")).html(object_user["last_tweet"]);
 		$("input[name='candidato']").val(object_user["id_twitter"]);
 		$("div#banner", $("div.container")).css("background-image", "url("+url_image+")");  
 		$("span.username", $("div.container")).html("<b>"+object_user["name"]+"</b> " + object_user["name"]);
-		$("div#banner", $("div.container")).show();
-		$("div#content", $("div.container")).show();
+
+		$("div.destaque", $("div.container")).show();
 		
 		//reload last_voted
 		
 		if(LAST_TARGET.length > 0){
-			var html = '<div class="img_voted">';
-			html+= '<img src="/media/images/voted.jpg" height="73" width="73"/>';
-			html+= '<span>5</span>';
-			html+= '</div>';
-			$("div.box_voted").prepend(html);
+			$("div.box_voted").html("");
+			for(i=LAST_TARGET.length-1; i>=0 && LAST_TARGET.length-5<i; i--){
+				var html = '<div class="img_voted">';
+				html+= '<img src="'+LAST_TARGET[i]["image_url"]+'" height="73" width="73"/>';
+				html+= '</div>';
+				$("div.box_voted").append(html);
+			}
 		}
 		
 		LAST_TARGET[LAST_TARGET.length] = object_user;
+		return false;
 	};
 	
 	$("div.messageBox").bind("bota_e_tira", function(event, args){
-		console.log(args)
-		alert(args["msg"]);
+		//alert(args["msg"]);
 		return false;
 	});
 	
