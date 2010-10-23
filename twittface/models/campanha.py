@@ -11,6 +11,7 @@ class Campanha (Model, Repository):
     id = Column("id", Integer, primary_key=True)
     nome = Column("nome", String)
     ativo = Column('ativo', MSBit(1), default=0)
+    candidata = Column('candidata', MSBit(1), default=0)
     votos = Column("votos", Integer)
     tempo = Column("tempo", Integer)
     inicio = Column("inicio", DateTime)

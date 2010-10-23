@@ -3,6 +3,7 @@ SQL_UP = """
 	  id int(10) unsigned auto_increment NOT NULL,
 	  nome varchar(64) NOT NULL,
       ativo bit(1) NOT NULL DEFAULT b'0',
+      candidata bit(1) NOT NULL DEFAULT b'0',
 	  votos int(10) NULL,
 	  tempo int(10) NOT NULL,
 	  inicio timestamp NULL,

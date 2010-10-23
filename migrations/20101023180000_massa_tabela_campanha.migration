@@ -1,0 +1,26 @@
+SQL_UP = """
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (1,  'curitiba',  False, True,  342,  2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (2,  'calcinha',  True,  False, 537,  2, '2010-10-23 18:00:00');
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (3,  'gatas',     False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (4,  'balada',    False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (5,  'futebol',   False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (6,  'python',    False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (7,  'maquiagem', False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (8,  'beleza',    False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (9,  'faculdade', False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (10, 'woods',     False, False, 224,  2, '2010-10-22 13:00:00');
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (11, 'ufpr',      False, True,  31,   2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (12, 'morena',    False, False, null, 2, '2010-10-21 02:30:00');
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (13, 'princesa',  False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (14, 'chopp',     False, True,  54,   2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (15, 'magrinha',  False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (16, 'modelo',    False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (17, 'micareta',  False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (18, 'show',      False, False, null, 2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (19, 'praia',     False, True,  198,  2, null);
+	insert into tface_campanha (id, nome, ativo, candidata, votos, tempo, inicio) value (20, 'vestido',   False, True,  98,   2, null);
+"""
+
+SQL_DOWN = """
+	delete from tface_campanha where id <= 20;
+"""
