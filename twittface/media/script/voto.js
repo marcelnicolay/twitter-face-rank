@@ -4,7 +4,11 @@ $(document).ready( function(){
 	
 	refresh_target = function(object_user){
 		
-		alert(object_user);
+		alert(object_user["last_tweet"]);
+
+		$("div#banner", $("div.container")).css("background-image",object_user["last_tweet"]);
+		$("span.username", $("div.container")).html("<b>"+object_user["last_tweet"]+"</b> " + object_user["last_tweet"]);
+		$("p", $("div.container")).html(object_user["last_tweet"]);
 		
 	},
 	
@@ -18,7 +22,7 @@ $(document).ready( function(){
 	$("div#banner", $("div.container")).bind("next_pic", function(event){
 		
 		if(TARGET_LIST.length == 0){
-			$.getJSON('/random_target', function(data) {
+			$.getJSON('/search/result.json?palavra=bunda', function(data) {
 				TARGET_LIST = data;
 				refresh_target(TARGET_LIST[0]);
 			});
