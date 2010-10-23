@@ -222,15 +222,26 @@ ul[id|="sub"] li a:active{
 	margin-top: 15px;
 	padding: 0px;
 	float: left;
-	width: 960px;
-	height: 250px;
+	width: 470px;
+	height: 150px;
 	background-color: #CCC;
+	border-right: 1px solid #676fff;
 }
 
-#voted h4{
+#voted .box_titulo{
+	padding-top: 15px;
+	padding-left: 10px;	
+}
+
+#voted .box_titulo h4{
 	color: #1c1f48;
 	font-size: 18px;
 	text-shadow: 2px 2px 3px #666;
+}
+
+voted .box_titulo h2{
+	color:#1e1e44;
+	font-size:24px;
 }
 
 #voted .img_voted{
@@ -239,6 +250,7 @@ ul[id|="sub"] li a:active{
 	width: 73px;
 	height: 73px;
 	top: 20px;
+	padding-left: 30px;
 	
 }
 
@@ -246,7 +258,7 @@ ul[id|="sub"] li a:active{
 	position: absolute;
 	display: block;
 	right: 0;
-	top: 43px;
+	top: 42px;
 	z-index: 2;
 	font-size: xx-large;
 	border-style: solid;
