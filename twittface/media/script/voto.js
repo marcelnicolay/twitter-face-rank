@@ -2,6 +2,7 @@ $(document).ready( function(){
 	
 	TARGET_LIST = [];
 	LAST_TARGET = [];
+	PALAVRA_ORD = "";
 	
 	refresh_target = function(object_user){
 		url_image = object_user["image_url"].replace("_normal.",".");
@@ -10,7 +11,7 @@ $(document).ready( function(){
 		$("input[name='candidato']").val(object_user["id_twitter"]);
 		$("div#banner", $("div.container")).css("background-image", "url("+url_image+")");  
 		$("span.username", $("div.container")).html("<b>"+object_user["name"]+"</b> " + object_user["name"]);
-
+		$("h4", $("div#content", $("div.container"))).html(PALAVRA_ORD);
 		$("div.destaque", $("div.container")).show();
 		
 		//reload last_voted
@@ -39,6 +40,7 @@ $(document).ready( function(){
 		if(TARGET_LIST.length == 0){
 			$.getJSON('/search/result.json?palavra=batom', function(data) {
 				TARGET_LIST = data["tweets"];
+				PALAVRA_ORD = data["palavra"] ? data["palavra"] : "(_|_)";
 				refresh_target(TARGET_LIST.pop());
 			});
 		}else{
