@@ -218,14 +218,16 @@ ul[id|="sub"] li a:active{
 	background-color: #000000;	
 }
 
-#content .box_voted{
+#voted .box_voted{
+	float: left;
 	position: relative;
 	width: 73px;
 	height: 73px;
+	top: 20px;
 	
 }
 
-#content .box_voted span{
+#voted .box_voted span{
 	position: absolute;
 	display: block;
 	right: 0;
@@ -240,7 +242,7 @@ ul[id|="sub"] li a:active{
 	padding: 2px;
 }
 
-#content .box_voted img{
+#voted .box_voted img{
 	position: absolute;
 }
 
