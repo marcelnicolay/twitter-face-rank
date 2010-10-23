@@ -154,6 +154,7 @@ ul[id|="sub"] li a:active{
 	width: 320px;
 	margin-top: 17px;	
 	margin-left: 110px;	
+	background: no-repeat;
 }
 
 #content{
@@ -428,8 +429,6 @@ voted .box_titulo h2{
 #preto{background-color: #ea2c5a;}
 #azul{background-color: #7165b1;}
 #cinza{background-color: #62b79a;}
-
-
 
 
 #tabs .ui-tabs{
