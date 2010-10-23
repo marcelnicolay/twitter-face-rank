@@ -152,14 +152,14 @@ ul[id|="sub"] li a:active{
 	height: 300px;
 	width: 320px;
 	margin-top: 17px;	
-	margin-left: 110px;
+	margin-left: 110px;	
 }
 
 #content{
 	margin-top: 17px;
 	padding: 20px;
 	float: left;
-	width: 313px;
+	width: 320px;
 }
 
 #content h2{
@@ -175,6 +175,47 @@ ul[id|="sub"] li a:active{
 
 #content p{
 	font-size: 14px;
+}
+
+#content .username{
+	color:#555998;	
+	font-size: 14px;
+}
+
+#content .timeago{
+	color:#555998;	
+	font-size: 10px;
+}
+
+#content .ratings-ico{
+	padding-top: 10px;
+}
+
+#content .ratings-num{
+	padding-top: 10px;
+}
+
+#content .ratings-num span a{
+	font-size: xx-large;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 50px;
+	padding: 5px; 
+}
+
+
+#content .ratings-num a:link,
+#content .ratings-num a:visited{
+	color: #696969;
+	display: inline-block;
+	text-decoration: none;
+	font: bold 50px;
+}
+
+#content .ratings-num a:hover,
+#content .ratings-num a:active{
+	color: #FFFFFF;
+	background-color: #000000;	
 }
 
 #novidades{
