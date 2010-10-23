@@ -29,4 +29,3 @@ class SearchController(BaseController):
                                         'last_tweet': t.text})
             
         return self.render_to_json(response, request_handler)
-        
