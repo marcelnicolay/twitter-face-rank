@@ -4,6 +4,7 @@
 from torneira.controller import BaseController, render_to_extension
 from tornado.web import HTTPError
 from twittface.models.voto import Voto 
+import tweepy
 
 import math
 import settings
@@ -27,7 +28,7 @@ class VotoController(BaseController):
 
                 try:
                     v.save()
-                    retorno = {"result": resuSet[1], "message":None}
+                    retorno = {"result": resuSet[1], "message":"Voto efetuado com sucesso!"}
                 except Exception, e:
                     print "*"*80
                     print "Erro: %s" % e
@@ -39,6 +40,21 @@ class VotoController(BaseController):
             retorno = {"result": resuSet[2], "message":"Dados incompletos"}
         
         return self.render_to_json(retorno, request_handler)
+    
+    
+    def random_target(self, request_handler):
+        
+        retorno = [
+                   {"id_twitter":234L, "image_url":"http://www.blogbrasil.com.br/wp-content/uploads/2009/05/andressa-soares-a-mulher-melancia-do-brasil.jpg", "last_tweet":"qqre porra"},
+                    {"id_twitter":234L, "image_url":"http://www.blogbrasil.com.br/wp-content/uploads/2009/03/regina-krilow-ganhadora-do-concurso-menina-fantastica.jpg", "last_tweet":"qqre porra"},
+                    {"id_twitter":234L, "image_url":"http://www.maisacao.net/blog/wp-content/uploads/2009/05/menina_maisa_cai_no_choro_durante_programa_deste_domingo_blog.jpg", "last_tweet":"qqre porra"},
+                    {"id_twitter":234L, "image_url":"http://peganaminhaebalanca.files.wordpress.com/2007/08/200_mulher_samambaia2.jpg", "last_tweet":"qqre porra"},
+                    {"id_twitter":234L, "image_url":"http://arquidiocesedecampogrande.org.br/arq/images/stories/mulher5.jpg", "last_tweet":"qqre porra"}
+                ]
+
+        
+        return self.render_to_json(retorno, request_handler)
+    
 
 
 

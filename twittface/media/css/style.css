@@ -218,18 +218,47 @@ ul[id|="sub"] li a:active{
 	background-color: #000000;	
 }
 
-#content .box_voted{
+#voted{
+	margin-top: 15px;
+	padding: 0px;
+	float: left;
+	width: 470px;
+	height: 150px;
+	background-color: #CCC;
+	border-right: 1px solid #676fff;
+}
+
+#voted .box_titulo{
+	padding-top: 15px;
+	padding-left: 10px;	
+}
+
+#voted .box_titulo h4{
+	color: #1c1f48;
+	font-size: 18px;
+	text-shadow: 2px 2px 3px #666;
+}
+
+voted .box_titulo h2{
+	color:#1e1e44;
+	font-size:24px;
+}
+
+#voted .img_voted{
+	float: left;
 	position: relative;
 	width: 73px;
 	height: 73px;
+	top: 20px;
+	padding-left: 30px;
 	
 }
 
-#content .box_voted span{
+#voted .img_voted span{
 	position: absolute;
 	display: block;
 	right: 0;
-	top: 43px;
+	top: 42px;
 	z-index: 2;
 	font-size: xx-large;
 	border-style: solid;
@@ -240,7 +269,7 @@ ul[id|="sub"] li a:active{
 	padding: 2px;
 }
 
-#content .box_voted img{
+#voted .img_voted img{
 	position: absolute;
 }
 
