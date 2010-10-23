@@ -1,6 +1,7 @@
 $(document).ready( function(){
 	
 	TARGET_LIST = [];
+	LAST_TARGET = [];
 	
 	refresh_target = function(object_user){
 		url_image = object_user["image_url"].replace("_normal.",".");
@@ -13,6 +14,18 @@ $(document).ready( function(){
 		$("span.username", $("div.container")).html("<b>"+object_user["name"]+"</b> " + object_user["name"]);
 		$("div#banner", $("div.container")).show();
 		$("div#content", $("div.container")).show();
+		
+		//reload last_voted
+		
+		if(LAST_TARGET.length > 0){
+			var html = '<div class="img_voted">';
+			html+= '<img src="/media/images/voted.jpg" height="73" width="73"/>';
+			html+= '<span>5</span>';
+			html+= '</div>';
+			$("div.box_voted").prepend(html);
+		}
+		
+		LAST_TARGET[LAST_TARGET.length] = object_user;
 	};
 	
 	$("div.messageBox").bind("bota_e_tira", function(event, args){
