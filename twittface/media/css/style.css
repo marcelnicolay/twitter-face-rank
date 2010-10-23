@@ -218,7 +218,22 @@ ul[id|="sub"] li a:active{
 	background-color: #000000;	
 }
 
-#voted .box_voted{
+#voted{
+	margin-top: 15px;
+	padding: 0px;
+	float: left;
+	width: 960px;
+	height: 250px;
+	background-color: #CCC;
+}
+
+#voted h4{
+	color: #1c1f48;
+	font-size: 18px;
+	text-shadow: 2px 2px 3px #666;
+}
+
+#voted .img_voted{
 	float: left;
 	position: relative;
 	width: 73px;
@@ -227,7 +242,7 @@ ul[id|="sub"] li a:active{
 	
 }
 
-#voted .box_voted span{
+#voted .img_voted span{
 	position: absolute;
 	display: block;
 	right: 0;
@@ -242,7 +257,7 @@ ul[id|="sub"] li a:active{
 	padding: 2px;
 }
 
-#voted .box_voted img{
+#voted .img_voted img{
 	position: absolute;
 }
 
