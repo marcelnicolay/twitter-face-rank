@@ -349,15 +349,15 @@ voted .box_titulo h2{
 	color: #22237d;
 }
 
-#info{
+#copy{
 	float:left;
 }
 
-#info ul li{
+#copy ul li{
 	display: inline;
 }
 
-#info ul li a{
+#copy ul li a{
 	color: #fffff1;
 	text-decoration: none;	
 }
