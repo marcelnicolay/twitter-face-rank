@@ -3,6 +3,7 @@
 
 from twittface.controller import authenticated
 from torneira.controller import BaseController, render_to_extension
+from twittface.models.campanha import Campanha
 import tweepy
 import random
 
@@ -13,14 +14,15 @@ class SearchController(BaseController):
         
         itens =  kw.get('itens') or 50
         page = kw.get('page') or 1
-        palavra = kw.get('palavra')
         
         api = tweepy.API()
+
+        campanha = Campanha().getAtiva()
         
-        result = api.search(q=palavra, page=page, rrd=itens, show_user=True)
+        result = api.search(q=campanha.nome, page=page, rrd=itens, show_user=True)
         random.shuffle(result)
         
-        response = {'tweets':[]}
+        response = {'tweets':[], 'campanha':campanha.as_dict()}
         
         for t in result:
             response['tweets'].append({'id_twitter':t.from_user_id, 
