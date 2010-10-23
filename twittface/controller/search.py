@@ -23,10 +23,10 @@ class SearchController(BaseController):
         response = {'tweets':[]}
         
         for t in result:
-            response['tweets'].append({'user_id':t.from_user_id, 
-                                        'image':t.profile_image_url,
-                                        'user': t.from_user,
-                                        'text': t.text})
+            response['tweets'].append({'id_twitter':t.from_user_id, 
+                                        'image_url':t.profile_image_url,
+                                        'name': t.from_user,
+                                        'last_tweet': t.text})
             
         return self.render_to_json(response, request_handler)
         
