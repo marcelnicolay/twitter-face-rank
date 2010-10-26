@@ -10,3 +10,4 @@ class Usuario (Model, Repository):
     id = Column("id", Integer, primary_key=True)
     id_twitter = Column("id_twitter", String)
     image_url = Column("image_url", String)
+    login = Column("login", String)

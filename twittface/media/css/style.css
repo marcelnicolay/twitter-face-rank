@@ -207,6 +207,7 @@ ul[id|="sub"] li a:active{
 	border-width: 1px;
 	font-size: 50px;
 	padding: 5px; 
+	cursor: pointer;
 }
 
 
@@ -618,3 +619,20 @@ voted .box_titulo h2{
 #contato p{
 	margin-top: 5px;
 }
+
+.user_twitter{
+	float:left;
+	padding-left: 10px;
+}
+
+.user_twitter img{
+	width: 25px;
+	height: 25px;
+}
+
+.user_twitter span{
+	color:#000;
+	font-size: smaller;
+	font-weight: bold; 
+	padding-bottom: 15px;
+	vertical-align: middle;

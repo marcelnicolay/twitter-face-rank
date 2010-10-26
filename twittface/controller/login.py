@@ -46,6 +46,7 @@ class LoginController(BaseController):
             usuario = Usuario()
             usuario.id_twitter = user_twitter.id
             usuario.image_url = user_twitter.profile_image_url
+            usuario.login = user_twitter.screen_name
             usuario.save()
             
         request_handler.set_secure_cookie(name="TWITTFACE_ID", value=str(usuario.id), path="/", expires_days=None)        
