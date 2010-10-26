@@ -38,7 +38,7 @@ $(document).ready( function(){
 	
 	$("div#banner", $("div.container")).bind("next_pic", function(event){
 		if(TARGET_LIST.length == 0){
-			$.getJSON('/search/result.json?palavra=batom', function(data) {
+			$.getJSON('/search/result.json?palavra=', function(data) {
 				TARGET_LIST = data["tweets"];
 				PALAVRA_ORD = data["palavra"] ? data["palavra"] : "(_|_)";
 				refresh_target(TARGET_LIST.pop());
@@ -55,20 +55,26 @@ $(document).ready( function(){
 		var candidato = $("input[name='candidato']").val();
 		var url = "/voto?eleitor="+eleitor+"&candidato="+candidato+"&nota="+nota;
 		
-		$.ajax({
-		  type: 'POST',
-		  url: url,
-		  data: { "nota": nota, "eleitor": eleitor, "candidato": candidato  },
-		  success: function(data){
-			  if (data){
-				  if(data.result=="success"){
-					  $("div#banner", $("div.container")).trigger("next_pic");
+		if(nota == "0"){
+			console.log("reload");
+			$("div#banner", $("div.container")).trigger("next_pic");
+		}else{
+		
+			$.ajax({
+			  type: 'POST',
+			  url: url,
+			  data: { "nota": nota, "eleitor": eleitor, "candidato": candidato  },
+			  success: function(data){
+				  if (data){
+					  if(data.result=="success"){
+						  $("div#banner", $("div.container")).trigger("next_pic");
+					  }
+					  $("div.messageBox").trigger("bota_e_tira", {"res":data.result, "msg":data.message});
 				  }
-				  $("div.messageBox").trigger("bota_e_tira", {"res":data.result, "msg":data.message});
-			  }
-		  },
-		  dataType: "json"
-		});
+			  },
+			  dataType: "json"
+			});
+		}
 		
 	});
 	

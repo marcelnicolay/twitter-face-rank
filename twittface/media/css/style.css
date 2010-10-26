@@ -191,6 +191,7 @@ ul[id|="sub"] li a:active{
 
 #content .ratings-ico{
 	padding-top: 10px;
+	margin-left: 10px;
 }
 
 #content .ratings-num{
