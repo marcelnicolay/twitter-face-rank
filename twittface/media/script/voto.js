@@ -58,7 +58,6 @@ $(document).ready( function(){
 		var url = "/voto?eleitor="+eleitor+"&candidato="+candidato+"&nota="+nota;
 		
 		if(nota == "0"){
-			console.log("reload");
 			$("div#banner", $("div.container")).trigger("next_pic");
 		}else{
 		
