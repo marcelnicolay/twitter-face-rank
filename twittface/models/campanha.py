@@ -43,6 +43,24 @@ class CampanhaRepository(Repository):
         session = TorneiraSession()
         campanha_ativa = session.query(Campanha).filter(Campanha.ativo==True).one()
         return campanha_ativa
+
+    def listaCandidatas(self):
+        session = TorneiraSession()
+        result = session.query(Campanha).filter(Campanha.candidata==True).all()
+        return [row.as_dict() for row in result]
+
+    def votar(self, id):
+        session = TorneiraSession()
+        session.execute("UPDATE tface_campanha SET votos = votos + 1 where id = %s" % id)
+        
+    def as_dict(self):
+        return {"id": self.id,
+                "nome": self.nome,
+                "ativo": self.ativo,
+                "candidata": self.candidata,
+                "votos": self.votos,
+                "tempo": self.tempo,
+                "inicio": self.inicio}
     
 class Campanha (Model, CampanhaRepository):
     __tablename__ = 'tface_campanha'
@@ -52,5 +70,5 @@ class Campanha (Model, CampanhaRepository):
     ativo = Column('ativo', MSBit(1), default=0)
     candidata = Column('candidata', MSBit(1), default=0)
     votos = Column("votos", Integer)
-    tempo = Column("tempo", Integer, default=1)
+    tempo = Column("tempo", Integer, default=60)
     inicio = Column("inicio", DateTime)

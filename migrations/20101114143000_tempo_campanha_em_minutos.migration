@@ -1,0 +1,7 @@
+SQL_UP = """
+	update tface_campanha set tempo = 60;
+"""
+
+SQL_DOWN = """
+	update tface_campanha set tempo = 2;
+"""

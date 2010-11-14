@@ -23,5 +23,6 @@ SQL_UP = """
 """
 
 SQL_DOWN = """
+	DROP TABLE  tface_usuario;
 	DROP TABLE  tface_voto;
 """
