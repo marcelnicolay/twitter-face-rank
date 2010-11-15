@@ -636,3 +636,49 @@ voted .box_titulo h2{
 	font-weight: bold; 
 	padding-bottom: 15px;
 	vertical-align: middle;
+}
+
+.proxima-campanha {
+	background: #ccdacc;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: table;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #1E1E44;
+}
+
+.proxima-campanha h3 {
+	padding-top: 5px;
+	padding-bottom: 2px;
+	border-bottom: 2px solid #1E1E44;
+}
+
+.proxima-campanha .linha-item-proxima-campanha .item-proxima-campanha {
+	width: 200px;
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	background: #aacAaa;
+}
+
+.proxima-campanha .linha-item-proxima-campanha .voto-proxima-campanha {
+	width: 200px;
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	background: #aacAaa;
+	text-align: center;
+}
+ .agradecemos-seu-voto {
+	background:	#DCCF7C;
+	font-weight: bold;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	text-align: center;	
+ }

@@ -52,15 +52,6 @@ class CampanhaRepository(Repository):
     def votar(self, id):
         session = TorneiraSession()
         session.execute("UPDATE tface_campanha SET votos = votos + 1 where id = %s" % id)
-        
-    def as_dict(self):
-        return {"id": self.id,
-                "nome": self.nome,
-                "ativo": self.ativo,
-                "candidata": self.candidata,
-                "votos": self.votos,
-                "tempo": self.tempo,
-                "inicio": self.inicio}
     
 class Campanha (Model, CampanhaRepository):
     __tablename__ = 'tface_campanha'
